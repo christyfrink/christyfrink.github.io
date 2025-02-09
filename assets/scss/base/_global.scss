@@ -28,6 +28,9 @@ body {
   ul {
     margin: 0 0 2rem;
   }
+  ul {
+    margin-top: 0;
+  }
 }
 
 // Text Selection Styling
@@ -38,6 +41,12 @@ body {
 
 ::selection {
   background: $primary-color;
+  color: white;
+}
+
+// Mark Element Styling
+mark {
+  background-color: $primary-color;
   color: white;
 }
 
