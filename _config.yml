@@ -2,9 +2,9 @@
 title: Christy Frink
 
 # Description of your website. This is used for social sharing.
-description:  Hello Hello
+description: Hi, I'm Christy 
 # A brief blurb about yourself
-content: testy test test
+content: 📍 Baltimore, MD <br><br> Hi, I'm Christy 👋 
 
 # Add your social links
 social:
@@ -20,7 +20,7 @@ social:
 # baseurl: "/uni" 
 markdown: kramdown
 sharing_image: share.jpg
-google_analytics: "UA-58263416-1" # google analytics tracking
+google_analytics: # google analytics tracking
 
 #### LAYOUT OPTIONS #####
 
