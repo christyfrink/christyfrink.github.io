@@ -5,8 +5,7 @@ title: christy frink
 description: Hi, I'm Christy 
 # A brief blurb about yourself
 content: 📍 <strong><mark>baltimore, maryland</mark></strong><br>
-  edtech product manager and chaotic good, equal parts crochet hooks and powertools. she/her/y'all.<br>
-  some projects i have my hands in 👇
+  edtech product manager and chaotic good, equal parts crochet hooks and powertools. she/her/y'all. some projects i have my hands in 👇
   <ul>
     <li><a href="https://www.unmgmt.org">unmanageable</a></li>
     <li><a href="https://www.chatterbird.org">chatterbird</a></li>
@@ -21,7 +20,6 @@ social:
     url: https://bsky.app/profile/christyfrink.com
   - platform: github
     url: https://github.com/christyfrink
-
 
 # General settings
 # url: http://brianmaierjr.github.com/uni
