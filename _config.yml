@@ -1,2 +1,31 @@
+# Your Name or Company
 title: Christy Frink
-theme: jekyll-theme-minimal
+
+# Description of your website. This is used for social sharing.
+description:  Hello Hello
+# A brief blurb about yourself
+content: testy test test
+
+# Add your social links
+social:
+  - platform: github
+    url: https://github.com/christyfrink
+  - platform: bluesky
+    url: https://bsky.app/profile/christyfrink.com
+  - platform: linkedin
+    url: brianmaierjr
+
+# General settings
+# url: http://brianmaierjr.github.com/uni
+# baseurl: "/uni" 
+markdown: kramdown
+sharing_image: share.jpg
+google_analytics: "UA-58263416-1" # google analytics tracking
+
+#### LAYOUT OPTIONS #####
+
+# Half layout
+half_side: right
+
+# Full layout
+full_text_position: right # left, right or center
