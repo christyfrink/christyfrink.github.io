@@ -1,19 +1,20 @@
 # Your Name or Company
-title: Christy Frink
+title: christy frink
 
 # Description of your website. This is used for social sharing.
 description: Hi, I'm Christy 
 # A brief blurb about yourself
-content: 📍 Baltimore, MD <br><br> Hi, I'm Christy 👋 
+content: 📍 <b>baltimore, maryland</b><br> edtech product manager and chaotic good, equal parts crochet hooks and powertools. she/her/y'all.
 
 # Add your social links
 social:
-  - platform: github
-    url: https://github.com/christyfrink
+  - platform: linkedin
+    url: https://www.linkedin.com/in/christyfrink/
   - platform: bluesky
     url: https://bsky.app/profile/christyfrink.com
-  - platform: linkedin
-    url: brianmaierjr
+  - platform: github
+    url: https://github.com/christyfrink
+
 
 # General settings
 # url: http://brianmaierjr.github.com/uni
