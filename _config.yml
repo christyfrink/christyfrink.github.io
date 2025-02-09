@@ -7,9 +7,10 @@ description: Hi, I'm Christy
 content: 📍 <strong><mark>baltimore, maryland</mark></strong><br>
   edtech product manager and chaotic good, equal parts crochet hooks and powertools. she/her/y'all. some projects i have my hands in 👇
   <ul>
-  <li><a href="https://www.unmgmt.org">unmanageable</a><br></li>
-  <li><a href="https://www.chatterbird.org">chatterbird</a><br></li>
-  <li><a href="https://www.highzerofoundation.org">high zero foundation</a></li></ul>
+  <li><a href="https://www.unmgmt.org" target="_blank">unmanageable</a><br></li>
+  <li><a href="https://www.chatterbird.org" target="_blank">chatterbird</a><br></li>
+  <li><a href="https://www.highzerofoundation.org" target="_blank">high zero foundation</a></li>
+  </ul>
 
 # Add your social links
 social:
