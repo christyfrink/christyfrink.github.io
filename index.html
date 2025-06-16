@@ -1,11 +1,140 @@
----
-layout: half
-title: Uni - A simple, one page Jekyll theme
----
-  {% if site.title %}
-  <h1 class="pageTitle">{{ site.title }}</h1>
-  {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christy Frink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.05em;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url('assets/redbuds.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        position: relative;
+        z-index: 0;
+    }
+    .bg-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.25); /* light tint */
+        z-index: -1;
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.85); /* soft white with slight transparency */
+        padding: 2em;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 90%;
+        margin: 0 auto;
+    }
 
-  {% if site.content %}
-  <p class="pageContent">{{ site.content }}</p>
-  {% endif %}
+    .card img,
+    .card h1,
+    .card h2,
+    .bio {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+  }
+
+    .profile-pic {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border: 7px solid #67147c;
+    }
+
+    h1 {
+      margin-bottom: 0.1em;
+      font-size: 2.5em;
+      color: #67147c;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;  /* aligns all rows to the left */
+        margin: 1em auto;
+        width: fit-content;        /* shrink-wrap the content */     
+    }
+    .links a {
+        color: #67147c;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.1em 0.1em;
+        border-radius: 3px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .links a:hover {
+        background-color: #67147c;
+        color: white;
+        padding: 0.1em 0.1em;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .link-row {
+        display: flex;
+        align-items: center;  /* was `left` before, which isn't valid */
+        gap: 0.5em;
+        margin: 0.1em 0;
+    }
+
+    .heart {
+        display: inline-block;
+        transform: translateY(4px);
+    }
+
+    .bio {
+        max-width: 400px;
+        text-align: center;
+        font-weight: bold;
+        margin: 1em auto;
+}
+    
+  </style>
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <div class="card">
+    <img src="assets/christy.JPG" alt="Christy Frink" class="profile-pic" />
+
+    <h1>christy frink</h1>
+    <h2>📍 baltimore, md</h2>
+    <p class="bio">edtech product manager and chaotic good, equal parts crochet hooks and powertools. she/her/y'all. some projects i have my hands in 👇</p>
+
+    <div class="links">
+      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.unmgmt.org/">unmanageable</a></div>
+      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.chatterbird.org/">chatterbird</a></div>
+      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.highzerofoundation.org/">high zero</a></div>
+      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.baltimorefordemocracy.org/">baltimore for democracy</a></div>
+    </div>
+  </div>
+</body>
+</html>
