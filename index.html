@@ -4,128 +4,209 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christy Frink</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
-        font-family: 'Nunito', sans-serif;
-        font-size: 1.1em;
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: url('assets/redbuds.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: #333;
-        position: relative;
-        z-index: 0;
-
+      font-family: 'Space Mono', monospace;
+      font-size: 1em;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #050505;
+      background-image:
+        linear-gradient(rgba(0, 255, 65, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      color: #c8c8c8;
+      position: relative;
     }
+
+    /* CRT scanlines */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.1) 3px,
+        rgba(0, 0, 0, 0.1) 4px
+      );
+      pointer-events: none;
+      z-index: 1000;
+    }
+
     .card {
-        background: rgba(255, 255, 255, 0.9); /* soft white with slight transparency */
-        padding: 1.5em 1em;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        max-width: 450px;
-        width: 90%;
-        margin: 1em auto;
-        box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.88);
+      border: 1px solid #39ff14;
+      box-shadow:
+        0 0 12px rgba(57, 255, 20, 0.35),
+        0 0 40px rgba(57, 255, 20, 0.08),
+        inset 0 0 40px rgba(0, 0, 0, 0.6);
+      padding: 2em 2.2em 2.2em;
+      max-width: 480px;
+      width: 90%;
+      margin: 1.5em auto;
+      text-align: center;
+      position: relative;
     }
 
-    .card img,
-    .card h1,
-    .card h2,
-    .bio {
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-  }
+    .card-corners {
+      position: absolute;
+      top: 0.4em;
+      left: 0.6em;
+      right: 0.6em;
+      display: flex;
+      justify-content: space-between;
+      color: rgba(57, 255, 20, 0.35);
+      font-size: 0.65em;
+      letter-spacing: 2px;
+      pointer-events: none;
+    }
 
     .profile-pic {
-        width: 240px;
-        height: 240px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 0.5em;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00ffff;
+      box-shadow:
+        0 0 12px rgba(0, 255, 255, 0.6),
+        0 0 35px rgba(0, 255, 255, 0.2);
+      display: block;
+      margin: 0.8em auto 1em;
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: -0.1em;
-      font-size: 2.5em;
-      color: #000;
+      font-family: 'VT323', monospace;
+      font-size: 3.8em;
+      color: #39ff14;
+      text-shadow: none;
+      margin: 0 0 0.05em;
+      letter-spacing: 3px;
     }
 
     h2 {
-        font-size: 1.4em;
-        margin-top: 0;
-        margin-bottom: 0.5em;
-        color: #000;
-    }
-
-    .links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;  /* aligns all rows to the left */
-        margin: 1em auto;
-        width: fit-content;        /* shrink-wrap the content */     
-    }
-    .links a {
-        color: #CA2A6A;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 0.1em 0.1em;
-        border-radius: 3px;
-        transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    .links a:hover {
-        background-color: #CA2A6A;
-        color: white;
-        padding: 0.1em 0.1em;
-        border-radius: 3px;
-        text-decoration: none;
-        transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    .link-row {
-        display: flex;
-        align-items: center;  /* was `left` before, which isn't valid */
-        gap: 0.5em;
-        margin: 0.1em 0;
-    }
-
-    .heart {
-        display: inline-block;
-        transform: translateY(4px);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78em;
+      color: #bf00ff;
+      text-shadow: 0 0 10px rgba(191, 0, 255, 0.6);
+      margin: 0 0 1.2em;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
 
     .bio {
-        max-width: 400px;
-        text-align: center;
-        font-weight: bold;
-        margin: 0.5em auto 1em auto;
-}
-    
+      font-size: 0.78em;
+      color: #a8a8a8;
+      line-height: 1.8;
+      margin: 0 0 1.6em;
+      text-align: left;
+    }
+
+    .links-header {
+      font-size: 0.68em;
+      color: #00ffff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 0.8em;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+      padding-bottom: 0.5em;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35em;
+    }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+
+    .prompt {
+      color: #ff0080;
+      text-shadow: 0 0 6px rgba(255, 0, 128, 0.5);
+      font-size: 0.85em;
+      flex-shrink: 0;
+    }
+
+    .links a {
+      color: #ff0080;
+      text-decoration: none;
+      font-size: 0.85em;
+      text-shadow: 0 0 6px rgba(255, 0, 128, 0.35);
+      transition: color 0.15s ease, text-shadow 0.15s ease;
+      letter-spacing: 1px;
+    }
+
+    .links a:hover {
+      color: #39ff14;
+      text-shadow:
+        0 0 8px #39ff14,
+        0 0 20px rgba(57, 255, 20, 0.4);
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 1.6em;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 0.55em;
+      height: 1.1em;
+      background: #39ff14;
+      box-shadow: 0 0 8px #39ff14;
+      animation: blink 1s step-end 5;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
-  <div class="bg-overlay"></div>
-
   <div class="card">
+    <div class="card-corners">
+      <span>&#9619;&#9618;&#9617;</span>
+      <span>&#9617;&#9618;&#9619;</span>
+    </div>
+
     <img src="assets/christy.JPG" alt="Christy Frink" class="profile-pic" />
 
     <h1>Christy Frink</h1>
-    <h2>Baltimore ✌️</h2>
-    <p class="bio">edtech product manager and chaotic good, equal parts crochet hooks, circuitry, and powertools. she/her/y'all. some projects i have my hands in:</p>
+    <h2>Baltimore &#9996;&#65039;</h2>
 
+    <p class="bio">edtech product manager and chaotic good, equal parts crochet hooks, circuitry, and powertools. she/her/y'all. some projects i've had my hands in:</p>
+
+    <div class="links-header">// projects</div>
     <div class="links">
-      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.unmgmt.org/">unmanageable</a></div>
-      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.chatterbird.org/">chatterbird</a></div>
-      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.highzerofoundation.org/">high zero</a></div>
-      <div class="link-row"><span class="heart">🖤</span> <a href="https://www.baltimorefordemocracy.org/">baltimore for democracy</a></div>
+      <div class="link-row"><span class="prompt">&gt;</span> <a href="https://www.unmgmt.org/">unmanageable</a></div>
+      <div class="link-row"><span class="prompt">&gt;</span> <a href="https://www.chatterbird.org/">chatterbird</a></div>
+      <div class="link-row"><span class="prompt">&gt;</span> <a href="https://www.highzerofoundation.org/">high zero</a></div>
+      <div class="link-row"><span class="prompt">&gt;</span> <a href="https://www.baltimorefordemocracy.org/">baltimore for democracy</a></div>
+    </div>
+
+    <div class="footer">
+      <span class="cursor"></span>
     </div>
   </div>
 </body>
