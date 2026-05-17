@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christy Frink</title>
+  <meta name="description" content="Christy Frink — edtech product manager, Baltimore. FOSS enthusiast, homelab tinkerer, experimental music fan." />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --bg-editor:   #111111;
@@ -221,6 +221,7 @@
       overflow-x: hidden;
     }
 
+    .file-tree { scrollbar-width: thin; scrollbar-color: #424242 transparent; }
     .file-tree::-webkit-scrollbar { width: 6px; }
     .file-tree::-webkit-scrollbar-track { background: transparent; }
     .file-tree::-webkit-scrollbar-thumb { background: #424242; border-radius: 3px; }
@@ -332,6 +333,7 @@
 
     .editor-pane.active { display: block; }
 
+    .editor-pane { scrollbar-width: thin; scrollbar-color: #424242 var(--bg-editor); }
     .editor-pane::-webkit-scrollbar { width: 10px; }
     .editor-pane::-webkit-scrollbar-track { background: var(--bg-editor); }
     .editor-pane::-webkit-scrollbar-thumb { background: #424242; }
@@ -380,53 +382,12 @@
     }
     .md-link:hover { text-decoration: underline; }
 
-    .md-comment { color: var(--color-green); font-style: italic; }
-
     .md-role { color: var(--color-mint); }
-
-    .ul-item {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      padding: 3px 0;
-      font-size: 13px;
-    }
-    .ul-bullet { color: var(--text-muted); }
-
-    /* Profile section */
-    .profile-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-
-    .profile-pic {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-      border: 2px solid var(--accent);
-    }
-
-    .profile-meta h1 {
-      font-size: 1.6em;
-      font-weight: 400;
-      color: var(--color-pink);
-      margin-bottom: 4px;
-    }
 
     .location {
       color: var(--color-lavender);
       font-size: 0.9em;
       margin-bottom: 10px;
-    }
-
-    .profile-meta .bio {
-      color: var(--text-primary);
-      line-height: 1.7;
-      font-size: 0.9em;
     }
 
     /* ── Status Bar ─────────────────────────── */
@@ -597,42 +558,42 @@
           <div class="subtree closed">
             <div class="ti file-img depth-2" id="tree-cat1" onclick="openFile('cat1')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_0002.jpg</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat2" onclick="openFile('cat2')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_0095.png</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat3" onclick="openFile('cat3')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_0385.jpg</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat4" onclick="openFile('cat4')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_2594.png</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat5" onclick="openFile('cat5')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_2626.png</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat6" onclick="openFile('cat6')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_4612.png</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat7" onclick="openFile('cat7')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_7916.png</span>
             </div>
             <div class="ti file-img depth-2" id="tree-cat8" onclick="openFile('cat8')">
               <span class="ti-arrow"></span>
-              <span class="ti-icon"><i class="fa-regular fa-image" style="color:var(--color-file-img)"></i></span>
+              <span class="ti-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg></span>
               <span class="ti-name">IMG_9520.png</span>
             </div>
           </div>
@@ -684,14 +645,14 @@
         <h1 class="md-h1">baltimore for democracy</h1>
         <p class="md-p"><span class="md-role">core member; graphic design & press releases</span><br><br><i>Baltimore for Democracy is a ballot issue committee formed in Baltimore City in 2024 to defeat Question H--a proposed charter amendment that would've reduced the size of Baltimore City Council from 14 district seats to just 8, nearly halving residents' representation. Question H was backed almost entirely by wealthy Baltimore County resident and Executive Chairman of Sinclair Broadcasting Group, David Smith. <br><br>Mission: To empower and uplift the voices of Baltimore City residents, we are building a transparent and inclusive community organization that will participate in and shape the future of our community to combat misinformation and special interests.</i><br><br>## <a class="md-link" href="https://www.baltimorefordemocracy.org/">baltimorefordemocracy.org</a></p>
       </div>
-      <div class="editor-pane" id="pane-cat1"><div class="img-view"><img src="assets/IMG_0002.jpg" alt="IMG_0002" /></div></div>
-      <div class="editor-pane" id="pane-cat2"><div class="img-view"><img src="assets/IMG_0095.png" alt="IMG_0095" /></div></div>
-      <div class="editor-pane" id="pane-cat3"><div class="img-view"><img src="assets/IMG_0385.jpg" alt="IMG_0385" /></div></div>
-      <div class="editor-pane" id="pane-cat4"><div class="img-view"><img src="assets/IMG_2594.png" alt="IMG_2594" /></div></div>
-      <div class="editor-pane" id="pane-cat5"><div class="img-view"><img src="assets/IMG_2626.png" alt="IMG_2626" /></div></div>
-      <div class="editor-pane" id="pane-cat6"><div class="img-view"><img src="assets/IMG_4612.png" alt="IMG_4612" /></div></div>
-      <div class="editor-pane" id="pane-cat7"><div class="img-view"><img src="assets/IMG_7916.png" alt="IMG_7916" /></div></div>
-      <div class="editor-pane" id="pane-cat8"><div class="img-view"><img src="assets/IMG_9520.png" alt="IMG_9520" /></div></div>
+      <div class="editor-pane" id="pane-cat1"><div class="img-view"><img src="assets/IMG_0002.jpg" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat2"><div class="img-view"><img src="assets/IMG_0095.png" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat3"><div class="img-view"><img src="assets/IMG_0385.jpg" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat4"><div class="img-view"><img src="assets/IMG_2594.png" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat5"><div class="img-view"><img src="assets/IMG_2626.png" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat6"><div class="img-view"><img src="assets/IMG_4612.png" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat7"><div class="img-view"><img src="assets/IMG_7916.png" alt="Cat photo" loading="lazy" /></div></div>
+      <div class="editor-pane" id="pane-cat8"><div class="img-view"><img src="assets/IMG_9520.png" alt="Cat photo" loading="lazy" /></div></div>
 
     </div><!-- /editor-area -->
   </div><!-- /workbench -->
@@ -721,14 +682,14 @@
       chatterbird:  { name: 'chatterbird.md',             lang: 'Markdown', pane: 'pane-chatterbird',  iconHtml: '<span style="color:var(--color-file-md)">↓</span>', treeId: 'tree-chatterbird' },
       highzero:     { name: 'high-zero.md',               lang: 'Markdown', pane: 'pane-highzero',     iconHtml: '<span style="color:var(--color-file-md)">↓</span>', treeId: 'tree-highzero' },
       bfd:          { name: 'baltimore-for-democracy.md', lang: 'Markdown', pane: 'pane-bfd',          iconHtml: '<span style="color:var(--color-file-md)">↓</span>', treeId: 'tree-bfd' },
-      cat1: { name: 'IMG_0002.jpg', lang: 'Image', pane: 'pane-cat1', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat1' },
-      cat2: { name: 'IMG_0095.png', lang: 'Image', pane: 'pane-cat2', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat2' },
-      cat3: { name: 'IMG_0385.jpg', lang: 'Image', pane: 'pane-cat3', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat3' },
-      cat4: { name: 'IMG_2594.png', lang: 'Image', pane: 'pane-cat4', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat4' },
-      cat5: { name: 'IMG_2626.png', lang: 'Image', pane: 'pane-cat5', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat5' },
-      cat6: { name: 'IMG_4612.png', lang: 'Image', pane: 'pane-cat6', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat6' },
-      cat7: { name: 'IMG_7916.png', lang: 'Image', pane: 'pane-cat7', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat7' },
-      cat8: { name: 'IMG_9520.png', lang: 'Image', pane: 'pane-cat8', iconHtml: '<i class="fa-regular fa-image" style="color:var(--color-file-img)"></i>', treeId: 'tree-cat8' },
+      cat1: { name: 'IMG_0002.jpg', lang: 'Image', pane: 'pane-cat1', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat1' },
+      cat2: { name: 'IMG_0095.png', lang: 'Image', pane: 'pane-cat2', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat2' },
+      cat3: { name: 'IMG_0385.jpg', lang: 'Image', pane: 'pane-cat3', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat3' },
+      cat4: { name: 'IMG_2594.png', lang: 'Image', pane: 'pane-cat4', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat4' },
+      cat5: { name: 'IMG_2626.png', lang: 'Image', pane: 'pane-cat5', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat5' },
+      cat6: { name: 'IMG_4612.png', lang: 'Image', pane: 'pane-cat6', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat6' },
+      cat7: { name: 'IMG_7916.png', lang: 'Image', pane: 'pane-cat7', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat7' },
+      cat8: { name: 'IMG_9520.png', lang: 'Image', pane: 'pane-cat8', iconHtml: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13" style="color:var(--color-file-img)" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="1"/><circle cx="5.5" cy="6" r="1.5"/><path d="M1 13l4-4 3 3 2-2 5 4"/></svg>', treeId: 'tree-cat8' },
     };
 
     let current = 'readme';
