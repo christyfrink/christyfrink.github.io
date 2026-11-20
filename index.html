@@ -69,17 +69,20 @@
     .glitch::before { filter: hue-rotate(90deg) saturate(3); }
     .glitch::after  { filter: hue-rotate(200deg) saturate(3); }
 
-    .glitch:hover::before {
+    .glitch:hover::before,
+    .glitch.glitch-load::before {
       opacity: 0.75;
       animation: glitch-clip-1 1.6s steps(1) infinite;
     }
 
-    .glitch:hover::after {
+    .glitch:hover::after,
+    .glitch.glitch-load::after {
       opacity: 0.75;
       animation: glitch-clip-2 1.6s steps(1) infinite;
     }
 
-    .glitch:hover img {
+    .glitch:hover img,
+    .glitch.glitch-load img {
       animation: glitch-shift 1.4s steps(1) infinite;
     }
 
@@ -178,7 +181,10 @@
       .glitch img,
       .glitch:hover::before,
       .glitch:hover::after,
-      .glitch:hover img {
+      .glitch:hover img,
+      .glitch.glitch-load::before,
+      .glitch.glitch-load::after,
+      .glitch.glitch-load img {
         animation: none;
         opacity: 0;
       }
@@ -198,5 +204,14 @@
       <a class="contact" href="mailto:info@christyfrink.com">get in touch</a>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const g = document.querySelector('.glitch');
+      setTimeout(() => {
+        g.classList.add('glitch-load');
+        setTimeout(() => g.classList.remove('glitch-load'), 1600);
+      }, 300);
+    });
+  </script>
 </body>
 </html>
